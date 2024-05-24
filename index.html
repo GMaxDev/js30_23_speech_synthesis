@@ -43,14 +43,13 @@
 
       function populateVoices() {
         voices = this.getVoices();
-        const voiceOptions = voices
+        voicesDropdown.innerHTML = voices
           // .filter(voice => voice.lang.includes('en'))
           .map(
             (voice) =>
               `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`
           )
           .join("");
-        voicesDropdown.innerHTML = voiceOptions;
       }
 
       function setVoice() {
